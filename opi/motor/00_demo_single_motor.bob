@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-09-13 14:47:29 by shroffk-->
 <display version="2.0.0">
-  <name>Demo Single Motor</name>
   <width>600</width>
   <height>720</height>
-  <background_color>
-    <color red="240" green="240" blue="240">
-    </color>
-  </background_color>
   <actions>
   </actions>
+  <grid_step_x>6</grid_step_x>
+  <grid_step_y>6</grid_step_y>
   <widget type="rectangle" version="2.0.0">
     <name>Title background</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
     <x>6</x>
     <y>6</y>
     <width>589</width>
     <height>73</height>
     <line_width>0</line_width>
     <line_color>
-      <color red="128" green="0" blue="255">
+      <color red="0" green="128" blue="255">
       </color>
     </line_color>
     <background_color>
@@ -39,13 +40,17 @@ $(pv_value)</tooltip>
     <width>571</width>
     <height>61</height>
     <font>
-      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="16.0">
       </font>
     </font>
     <foreground_color>
       <color red="255" green="255" blue="255">
       </color>
     </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <actions>
@@ -66,6 +71,10 @@ $(pv_value)</tooltip>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
     </font>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <wrap_words>false</wrap_words>
@@ -75,6 +84,70 @@ $(pv_value)</tooltip>
       <color red="0" green="128" blue="255">
       </color>
     </border_color>
+  </widget>
+  <widget type="stripchart" version="2.1.0">
+    <name>XY Graph</name>
+    <x>6</x>
+    <y>312</y>
+    <width>589</width>
+    <height>367</height>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <title_font>
+      <font family="Arial" style="BOLD" size="11.881188118811881">
+      </font>
+    </title_font>
+    <show_toolbar>false</show_toolbar>
+    <show_legend>true</show_legend>
+    <actions>
+    </actions>
+    <y_axes>
+      <y_axis>
+        <title>Degrees</title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>true</show_grid>
+        <visible>true</visible>
+        <color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </color>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>Position</name>
+        <y_pv>XF:31IDA-OP{Tbl-Ax:X1}Mtr.RBV</y_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="21" green="21" blue="196">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>0</point_type>
+        <point_size>4</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>Set Point</name>
+        <y_pv>XF:31IDA-OP{Tbl-Ax:X1}Mtr.VAL</y_pv>
+        <axis>0</axis>
+        <trace_type>2</trace_type>
+        <color>
+          <color red="242" green="26" blue="26">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>0</point_type>
+        <point_size>4</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_1</name>
@@ -87,6 +160,10 @@ $(pv_value)</tooltip>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>
     </font>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <wrap_words>false</wrap_words>
@@ -99,7 +176,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_1</name>
-    <pv_name>XF:31IDA-OP{Tbl-Ax:X1}Mtr.RBV</pv_name>
+    <pv_name>XF:31IDA-OP{Tbl-Ax:X1}Mtr:RBV</pv_name>
     <x>252</x>
     <y>279</y>
     <width>122</width>
@@ -123,6 +200,10 @@ $(pv_value)</tooltip>
     <y>231</y>
     <width>157</width>
     <height>31</height>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <wrap_words>false</wrap_words>
@@ -140,14 +221,6 @@ $(pv_value)</tooltip>
     <y>263</y>
     <width>33</width>
     <height>33</height>
-    <off_color>
-      <color red="0" green="100" blue="0">
-      </color>
-    </off_color>
-    <on_color>
-      <color red="0" green="255" blue="0">
-      </color>
-    </on_color>
     <foreground_color>
       <color red="192" green="192" blue="192">
       </color>
@@ -157,7 +230,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Input</name>
-    <pv_name>XF:31IDA-OP{Tbl-Ax:X1}Mtr.VAL</pv_name>
+    <pv_name>XF:31IDA-OP{Tbl-Ax:X1}Mtr:SP</pv_name>
     <x>252</x>
     <y>234</y>
     <width>122</width>
@@ -176,13 +249,16 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="rectangle" version="2.0.0">
     <name>Example background</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
     <x>6</x>
     <y>84</y>
     <width>589</width>
     <height>145</height>
     <line_width>0</line_width>
     <line_color>
-      <color red="128" green="0" blue="255">
+      <color red="0" green="128" blue="255">
       </color>
     </line_color>
     <background_color>
@@ -199,17 +275,18 @@ $(pv_value)</tooltip>
     <name>Action Button</name>
     <actions>
       <action type="open_display">
-        <file>03_demo_linking_container.bob</file>
-        <target>replace</target>
-        <description>Open Next Demo</description>
+        <description>Open Display</description>
+        <file>01_demo_single_motor_beam_detection.opi</file>
+        <target>tab</target>
       </action>
     </actions>
-    <text>Open Next Demo</text>
+    <text>Open next demo screen</text>
     <x>300</x>
     <y>684</y>
     <width>295</width>
     <height>34</height>
     <tooltip>Open next demo screen</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Example description</name>
@@ -226,10 +303,10 @@ XY Graph, traces the changes in the motor set point and readback values
     <y>90</y>
     <width>577</width>
     <height>133</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
     <actions>
     </actions>
     <border_color>
@@ -241,9 +318,9 @@ XY Graph, traces the changes in the motor set point and readback values
     <name>Action Button_1</name>
     <actions>
       <action type="open_display">
-        <file>../main.bob</file>
-        <target>replace</target>
-        <description>Home</description>
+        <description>Open Display</description>
+        <file>../main.opi</file>
+        <target>tab</target>
       </action>
     </actions>
     <text>Home</text>
@@ -252,15 +329,6 @@ XY Graph, traces the changes in the motor set point and readback values
     <width>288</width>
     <height>34</height>
     <tooltip>Open next demo screen</tooltip>
-  </widget>
-  <widget type="databrowser" version="2.0.0">
-    <name>XY Graph</name>
-    <file>motor-position.plt</file>
-    <x>6</x>
-    <y>312</y>
-    <width>589</width>
-    <height>367</height>
-    <actions>
-    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
 </display>

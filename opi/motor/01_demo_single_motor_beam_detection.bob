@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-09-13 14:52:44 by shroffk-->
 <display version="2.0.0">
   <name>Demo Single Motor Beam Detection</name>
   <width>600</width>
   <height>720</height>
-  <background_color>
-    <color red="240" green="240" blue="240">
-    </color>
-  </background_color>
   <actions>
   </actions>
   <widget type="rectangle" version="2.0.0">
@@ -39,7 +36,7 @@ $(pv_value)</tooltip>
     <width>571</width>
     <height>61</height>
     <font>
-      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="16.0">
       </font>
     </font>
     <foreground_color>
@@ -76,7 +73,7 @@ $(pv_value)</tooltip>
       </color>
     </border_color>
   </widget>
-  <widget type="xyplot" version="2.0.0">
+  <widget type="xyplot" version="3.0.0">
     <name>XY Graph</name>
     <x>6</x>
     <y>306</y>
@@ -86,10 +83,6 @@ $(pv_value)</tooltip>
       <color red="0" green="0" blue="255">
       </color>
     </foreground_color>
-    <background_color>
-      <color red="240" green="240" blue="240">
-      </color>
-    </background_color>
     <title_font>
       <font family="Arial" style="BOLD" size="11.881188118811881">
       </font>
@@ -129,13 +122,18 @@ $(pv_value)</tooltip>
           <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
           </font>
         </scale_font>
+        <on_right>false</on_right>
         <visible>true</visible>
+        <color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </color>
       </y_axis>
     </y_axes>
     <traces>
       <trace>
         <name>corelation plot - motor position and sensor</name>
-        <x_pv></x_pv>
+        <x_pv>XF:31IDA-OP{Tbl-Ax:X1}Mtr:RBV</x_pv>
         <y_pv>XF:31IDA-BI{Dev:1}E-I</y_pv>
         <err_pv></err_pv>
         <axis>0</axis>
@@ -145,23 +143,10 @@ $(pv_value)</tooltip>
           </color>
         </color>
         <line_width>1</line_width>
+        <line_style>0</line_style>
         <point_type>2</point_type>
         <point_size>5</point_size>
-      </trace>
-      <trace>
-        <name>$(traces[1].y_pv)</name>
-        <x_pv></x_pv>
-        <y_pv>XF:31IDA-OP{Tbl-Ax:X1}Mtr-RBV</y_pv>
-        <err_pv></err_pv>
-        <axis>0</axis>
-        <trace_type>1</trace_type>
-        <color>
-          <color red="0" green="0" blue="255">
-          </color>
-        </color>
-        <line_width>1</line_width>
-        <point_type>0</point_type>
-        <point_size>10</point_size>
+        <visible>true</visible>
       </trace>
     </traces>
   </widget>
@@ -188,7 +173,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_1</name>
-    <pv_name>XF:31IDA-OP{Tbl-Ax:X1}Mtr.RBV</pv_name>
+    <pv_name>XF:31IDA-OP{Tbl-Ax:X1}Mtr:RBV</pv_name>
     <x>252</x>
     <y>273</y>
     <width>122</width>
@@ -229,14 +214,6 @@ $(pv_value)</tooltip>
     <y>257</y>
     <width>33</width>
     <height>33</height>
-    <off_color>
-      <color red="0" green="100" blue="0">
-      </color>
-    </off_color>
-    <on_color>
-      <color red="0" green="255" blue="0">
-      </color>
-    </on_color>
     <foreground_color>
       <color red="192" green="192" blue="192">
       </color>
@@ -246,7 +223,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Input</name>
-    <pv_name>XF:31IDA-OP{Tbl-Ax:X1}Mtr</pv_name>
+    <pv_name>XF:31IDA-OP{Tbl-Ax:X1}Mtr:SP</pv_name>
     <x>252</x>
     <y>228</y>
     <width>122</width>
@@ -289,6 +266,7 @@ $(pv_value)</tooltip>
     <name>Action Button</name>
     <actions>
       <action type="open_display">
+        <description>Open Display</description>
         <file>../main.opi</file>
         <target>replace</target>
       </action>
@@ -304,6 +282,7 @@ $(pv_value)</tooltip>
     <name>Action Button_1</name>
     <actions>
       <action type="open_display">
+        <description>Open Display</description>
         <file>03_demo_linking_container.bob</file>
         <target>replace</target>
       </action>
@@ -334,28 +313,5 @@ The XY graph is a correlation plot of motor position and sensor reading. This is
       <color red="0" green="128" blue="255">
       </color>
     </border_color>
-  </widget>
-  <widget type="xyplot" version="2.0.0">
-    <name>X/Y Plot</name>
-    <y>720</y>
-    <width>544</width>
-    <height>240</height>
-    <traces>
-      <trace>
-        <name>$(traces[0].y_pv)</name>
-        <x_pv></x_pv>
-        <y_pv>XF:31IDA-OP{Tbl-Ax:X1}Mtr-RBV</y_pv>
-        <err_pv></err_pv>
-        <axis>0</axis>
-        <trace_type>1</trace_type>
-        <color>
-          <color red="0" green="0" blue="255">
-          </color>
-        </color>
-        <line_width>1</line_width>
-        <point_type>0</point_type>
-        <point_size>10</point_size>
-      </trace>
-    </traces>
   </widget>
 </display>
