@@ -64,6 +64,11 @@
       <period>0.0</period>
       <ring_size>5000</ring_size>
       <request>OPTIMIZED</request>
+      <archive>
+        <name>pbraw://epics-services-tst:13168/retrieval</name>
+        <url>pbraw://epics-services-tst:13168/retrieval</url>
+        <key>1</key>
+      </archive>
     </pv>
     <pv>
       <display_name>Set Point</display_name>
@@ -84,6 +89,11 @@
       <period>0.0</period>
       <ring_size>5000</ring_size>
       <request>OPTIMIZED</request>
+      <archive>
+        <name>pbraw://epics-services-tst:13168/retrieval</name>
+        <url>pbraw://epics-services-tst:13168/retrieval</url>
+        <key>1</key>
+      </archive>
     </pv>
   </pvlist>
 </databrowser>
