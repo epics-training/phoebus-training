@@ -1,0 +1,173 @@
+record(ao, "XF:31IDA-OP{Tbl-Ax:X1}Mtr:SP") {
+    field(SCAN, "1 second")
+}
+
+record(calc, "XF:31IDA-OP{Tbl-Ax:X1}Mtr:RBV") {
+    field(VAL, "0")
+    field(SCAN, ".1 second")
+    field(INPA, "XF:31IDA-OP{Tbl-Ax:X1}Mtr:SP")
+    field(CALC, "VAL<A?VAL+1:VAL>A?VAL-1:VAL")
+    field(HIHI, "10")
+    field(HHSV, "MAJOR")
+    field(HIGH, "8")
+    field(HSV, "MINOR")
+    field(LOW, "-8")
+    field(LSV, "MINOR")
+    field(LOLO, "-10")
+    field(LLSV, "MAJOR")
+}
+
+record(calcout,"XF:31IDA-BI{Dev:1}E-I") {
+  field(PINI,"1")
+  field(INPA,"-5")
+  field(INPB,"5")
+  field(INPC,"XF:31IDA-OP{Tbl-Ax:X1}Mtr:RBV CP")
+  field(INPD,"2.5")
+  field(INPE,"0.3")
+  field(CALC,"C<A||C>B?RNDM*E:EXP(-1.0*((C-D)**2))")
+}
+
+record(ao, "XF:31IDA-OP{Tbl-Ax:X2}Mtr:SP") {
+    field(SCAN, "1 second")
+}
+
+record(calc, "XF:31IDA-OP{Tbl-Ax:X2}Mtr:RBV") {
+    field(VAL, "0")
+    field(SCAN, ".1 second")
+    field(INPA, "XF:31IDA-OP{Tbl-Ax:X2}Mtr:SP")
+    field(CALC, "VAL<A?VAL+1:VAL>A?VAL-1:VAL")
+    field(HIHI, "10")
+    field(HHSV, "MAJOR")
+    field(HIGH, "8")
+    field(HSV, "MINOR")
+    field(LOW, "-8")
+    field(LSV, "MINOR")
+    field(LOLO, "-10")
+    field(LLSV, "MAJOR")
+}
+
+record(calcout,"XF:31IDA-BI{Dev:2}E-I") {
+  field(PINI,"1")
+  field(INPA,"-5")
+  field(INPB,"5")
+  field(INPC,"XF:31IDA-OP{Tbl-Ax:X2}Mtr:RBV CP")
+  field(INPD,"1.5")
+  field(INPE,"0.3")
+  field(CALC,"C<A||C>B?RNDM*E:EXP(-1.0*((C-D)**2))")
+}
+
+record(ao, "XF:31IDA-OP{Tbl-Ax:X3}Mtr:SP") {
+    field(SCAN, "1 second")
+}
+
+record(calc, "XF:31IDA-OP{Tbl-Ax:X3}Mtr:RBV") {
+    field(VAL, "0")
+    field(SCAN, ".1 second")
+    field(INPA, "XF:31IDA-OP{Tbl-Ax:X3}Mtr:SP")
+    field(CALC, "VAL<A?VAL+1:VAL>A?VAL-1:VAL")
+    field(HIHI, "10")
+    field(HHSV, "MAJOR")
+    field(HIGH, "8")
+    field(HSV, "MINOR")
+    field(LOW, "-8")
+    field(LSV, "MINOR")
+    field(LOLO, "-10")
+    field(LLSV, "MAJOR")
+}
+
+record(calcout,"XF:31IDA-BI{Dev:3}E-I") {
+  field(PINI,"1")
+  field(INPA,"-5")
+  field(INPB,"5")
+  field(INPC,"XF:31IDA-OP{Tbl-Ax:X3}Mtr:RBV CP")
+  field(INPD,"0.5")
+  field(INPE,"0.3")
+  field(CALC,"C<A||C>B?RNDM*E:EXP(-1.0*((C-D)**2))")
+}
+
+record(ao, "XF:31IDA-OP{Tbl-Ax:X4}Mtr:SP") {
+    field(SCAN, "1 second")
+}
+
+record(calc, "XF:31IDA-OP{Tbl-Ax:X4}Mtr:RBV") {
+    field(VAL, "0")
+    field(SCAN, ".1 second")
+    field(INPA, "XF:31IDA-OP{Tbl-Ax:X4}Mtr:SP")
+    field(CALC, "VAL<A?VAL+1:VAL>A?VAL-1:VAL")
+    field(HIHI, "10")
+    field(HHSV, "MAJOR")
+    field(HIGH, "8")
+    field(HSV, "MINOR")
+    field(LOW, "-8")
+    field(LSV, "MINOR")
+    field(LOLO, "-10")
+    field(LLSV, "MAJOR")
+}
+
+record(calcout,"XF:31IDA-BI{Dev:4}E-I") {
+  field(PINI,"1")
+  field(INPA,"-5")
+  field(INPB,"5")
+  field(INPC,"XF:31IDA-OP{Tbl-Ax:X4}Mtr:RBV CP")
+  field(INPD,"-0.5")
+  field(INPE,"0.3")
+  field(CALC,"C<A||C>B?RNDM*E:EXP(-1.0*((C-D)**2))")
+}
+
+record(ao, "XF:31IDA-OP{Tbl-Ax:X5}Mtr:SP") {
+    field(SCAN, "1 second")
+}
+
+record(calc, "XF:31IDA-OP{Tbl-Ax:X5}Mtr:RBV") {
+    field(VAL, "0")
+    field(SCAN, ".1 second")
+    field(INPA, "XF:31IDA-OP{Tbl-Ax:X5}Mtr:SP")
+    field(CALC, "VAL<A?VAL+1:VAL>A?VAL-1:VAL")
+    field(HIHI, "10")
+    field(HHSV, "MAJOR")
+    field(HIGH, "8")
+    field(HSV, "MINOR")
+    field(LOW, "-8")
+    field(LSV, "MINOR")
+    field(LOLO, "-10")
+    field(LLSV, "MAJOR")
+}
+
+record(calcout,"XF:31IDA-BI{Dev:5}E-I") {
+  field(PINI,"1")
+  field(INPA,"-5")
+  field(INPB,"5")
+  field(INPC,"XF:31IDA-OP{Tbl-Ax:X5}Mtr:RBV CP")
+  field(INPD,"-1.5")
+  field(INPE,"0.3")
+  field(CALC,"C<A||C>B?RNDM*E:EXP(-1.0*((C-D)**2))")
+}
+
+record(ao, "XF:31IDA-OP{Tbl-Ax:X6}Mtr:SP") {
+    field(SCAN, "1 second")
+}
+
+record(calc, "XF:31IDA-OP{Tbl-Ax:X6}Mtr:RBV") {
+    field(VAL, "0")
+    field(SCAN, ".1 second")
+    field(INPA, "XF:31IDA-OP{Tbl-Ax:X6}Mtr:SP")
+    field(CALC, "VAL<A?VAL+1:VAL>A?VAL-1:VAL")
+    field(HIHI, "10")
+    field(HHSV, "MAJOR")
+    field(HIGH, "8")
+    field(HSV, "MINOR")
+    field(LOW, "-8")
+    field(LSV, "MINOR")
+    field(LOLO, "-10")
+    field(LLSV, "MAJOR")
+}
+
+record(calcout,"XF:31IDA-BI{Dev:6}E-I") {
+  field(PINI,"1")
+  field(INPA,"-5")
+  field(INPB,"5")
+  field(INPC,"XF:31IDA-OP{Tbl-Ax:X6}Mtr:RBV CP")
+  field(INPD,"-2.5")
+  field(INPE,"0.3")
+  field(CALC,"C<A||C>B?RNDM*E:EXP(-1.0*((C-D)**2))")
+}
