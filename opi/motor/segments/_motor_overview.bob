@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-09-13 14:54:38 by shroffk-->
+<!--Saved on 2024-09-15 21:19:54 by shroffk-->
 <display version="2.0.0">
   <name>Motor Overview</name>
   <width>600</width>
@@ -25,20 +25,6 @@
       <color red="0" green="128" blue="255">
       </color>
     </border_color>
-  </widget>
-  <widget type="led" version="2.0.0">
-    <name>LED</name>
-    <pv_name>XF:31IDA-OP{Tbl-Ax:X${N}}Mtr.MOVN</pv_name>
-    <x>446</x>
-    <y>8</y>
-    <width>21</width>
-    <height>21</height>
-    <foreground_color>
-      <color red="192" green="192" blue="192">
-      </color>
-    </foreground_color>
-    <actions>
-    </actions>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Input</name>

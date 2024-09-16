@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-09-13 14:47:29 by shroffk-->
+<!--Saved on 2024-09-15 21:20:37 by shroffk-->
 <display version="2.0.0">
   <width>600</width>
   <height>720</height>
@@ -192,41 +192,6 @@ $(pv_value)</tooltip>
       <color red="0" green="128" blue="255">
       </color>
     </border_color>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_2</name>
-    <text>Motor Moving:</text>
-    <x>439</x>
-    <y>231</y>
-    <width>157</width>
-    <height>31</height>
-    <background_color>
-      <color red="255" green="255" blue="255">
-      </color>
-    </background_color>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <wrap_words>false</wrap_words>
-    <actions>
-    </actions>
-    <border_color>
-      <color red="0" green="128" blue="255">
-      </color>
-    </border_color>
-  </widget>
-  <widget type="led" version="2.0.0">
-    <name>LED</name>
-    <pv_name>XF:31IDA-OP{Tbl-Ax:X1}Mtr.MOVN</pv_name>
-    <x>501</x>
-    <y>263</y>
-    <width>33</width>
-    <height>33</height>
-    <foreground_color>
-      <color red="192" green="192" blue="192">
-      </color>
-    </foreground_color>
-    <actions>
-    </actions>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Input</name>
