@@ -121,7 +121,7 @@ $(pv_value)</tooltip>
     <traces>
       <trace>
         <name>Position</name>
-        <y_pv>XF:31IDA-OP{Tbl-Ax:X1}Mtr.RBV</y_pv>
+        <y_pv>XF:31IDA-OP{Tbl-Ax:X1}Mtr:RBV</y_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
@@ -135,7 +135,7 @@ $(pv_value)</tooltip>
       </trace>
       <trace>
         <name>Set Point</name>
-        <y_pv>XF:31IDA-OP{Tbl-Ax:X1}Mtr.VAL</y_pv>
+        <y_pv>XF:31IDA-OP{Tbl-Ax:X1}Mtr:SP</y_pv>
         <axis>0</axis>
         <trace_type>2</trace_type>
         <color>
