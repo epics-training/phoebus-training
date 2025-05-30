@@ -1,10 +1,12 @@
 record(ao, "XF:31IDA-OP{Tbl-Ax:X1}Mtr:SP") {
+    alias("XF:31IDA-OP{Tbl-Ax:X1}Mtr")
     field(SCAN, "1 second")
 }
 
 record(calc, "XF:31IDA-OP{Tbl-Ax:X1}Mtr:RBV") {
+    alias("XF:31IDA-OP{Tbl-Ax:X1}Mtr_Alarm")
     field(VAL, "0")
-    field(SCAN, ".1 second")
+    field(SCAN, ".5 second")
     field(INPA, "XF:31IDA-OP{Tbl-Ax:X1}Mtr:SP")
     field(CALC, "VAL<A?VAL+1:VAL>A?VAL-1:VAL")
     field(HIHI, "10")
@@ -27,13 +29,23 @@ record(calcout,"XF:31IDA-BI{Dev:1}E-I") {
   field(CALC,"C<A||C>B?RNDM*E:EXP(-1.0*((C-D)**2))")
 }
 
+record(calc, "XF:31IDA-OP{Tbl-Ax:X1}Mtr:MOVN") {
+    field(VAL, "0")
+    field(SCAN, ".1 second")
+    field(INPA, "XF:31IDA-OP{Tbl-Ax:X1}Mtr:SP")
+    field(INPB, "XF:31IDA-OP{Tbl-Ax:X1}Mtr:RBV")
+    field(CALC, "A==B?0:1")
+}
+
 record(ao, "XF:31IDA-OP{Tbl-Ax:X2}Mtr:SP") {
+    alias("XF:31IDA-OP{Tbl-Ax:X2}Mtr")
     field(SCAN, "1 second")
 }
 
 record(calc, "XF:31IDA-OP{Tbl-Ax:X2}Mtr:RBV") {
+    alias("XF:31IDA-OP{Tbl-Ax:X2}Mtr_Alarm")
     field(VAL, "0")
-    field(SCAN, ".1 second")
+    field(SCAN, ".5 second")
     field(INPA, "XF:31IDA-OP{Tbl-Ax:X2}Mtr:SP")
     field(CALC, "VAL<A?VAL+1:VAL>A?VAL-1:VAL")
     field(HIHI, "10")
@@ -56,13 +68,23 @@ record(calcout,"XF:31IDA-BI{Dev:2}E-I") {
   field(CALC,"C<A||C>B?RNDM*E:EXP(-1.0*((C-D)**2))")
 }
 
+record(calc, "XF:31IDA-OP{Tbl-Ax:X2}Mtr:MOVN") {
+    field(VAL, "0")
+    field(SCAN, ".1 second")
+    field(INPA, "XF:31IDA-OP{Tbl-Ax:X2}Mtr:SP")
+    field(INPB, "XF:31IDA-OP{Tbl-Ax:X2}Mtr:RBV")
+    field(CALC, "A==B?0:1")
+}
+
 record(ao, "XF:31IDA-OP{Tbl-Ax:X3}Mtr:SP") {
+    alias("XF:31IDA-OP{Tbl-Ax:X3}Mtr")
     field(SCAN, "1 second")
 }
 
 record(calc, "XF:31IDA-OP{Tbl-Ax:X3}Mtr:RBV") {
+    alias("XF:31IDA-OP{Tbl-Ax:X3}Mtr_Alarm")
     field(VAL, "0")
-    field(SCAN, ".1 second")
+    field(SCAN, ".5 second")
     field(INPA, "XF:31IDA-OP{Tbl-Ax:X3}Mtr:SP")
     field(CALC, "VAL<A?VAL+1:VAL>A?VAL-1:VAL")
     field(HIHI, "10")
@@ -85,13 +107,23 @@ record(calcout,"XF:31IDA-BI{Dev:3}E-I") {
   field(CALC,"C<A||C>B?RNDM*E:EXP(-1.0*((C-D)**2))")
 }
 
+record(calc, "XF:31IDA-OP{Tbl-Ax:X3}Mtr:MOVN") {
+    field(VAL, "0")
+    field(SCAN, ".1 second")
+    field(INPA, "XF:31IDA-OP{Tbl-Ax:X3}Mtr:SP")
+    field(INPB, "XF:31IDA-OP{Tbl-Ax:X3}Mtr:RBV")
+    field(CALC, "A==B?0:1")
+}
+
 record(ao, "XF:31IDA-OP{Tbl-Ax:X4}Mtr:SP") {
+    alias("XF:31IDA-OP{Tbl-Ax:X4}Mtr")
     field(SCAN, "1 second")
 }
 
 record(calc, "XF:31IDA-OP{Tbl-Ax:X4}Mtr:RBV") {
+    alias("XF:31IDA-OP{Tbl-Ax:X4}Mtr_Alarm")
     field(VAL, "0")
-    field(SCAN, ".1 second")
+    field(SCAN, ".5 second")
     field(INPA, "XF:31IDA-OP{Tbl-Ax:X4}Mtr:SP")
     field(CALC, "VAL<A?VAL+1:VAL>A?VAL-1:VAL")
     field(HIHI, "10")
@@ -114,13 +146,23 @@ record(calcout,"XF:31IDA-BI{Dev:4}E-I") {
   field(CALC,"C<A||C>B?RNDM*E:EXP(-1.0*((C-D)**2))")
 }
 
+record(calc, "XF:31IDA-OP{Tbl-Ax:X4}Mtr:MOVN") {
+    field(VAL, "0")
+    field(SCAN, ".1 second")
+    field(INPA, "XF:31IDA-OP{Tbl-Ax:X4}Mtr:SP")
+    field(INPB, "XF:31IDA-OP{Tbl-Ax:X4}Mtr:RBV")
+    field(CALC, "A==B?0:1")
+}
+
 record(ao, "XF:31IDA-OP{Tbl-Ax:X5}Mtr:SP") {
+    alias("XF:31IDA-OP{Tbl-Ax:X5}Mtr")
     field(SCAN, "1 second")
 }
 
 record(calc, "XF:31IDA-OP{Tbl-Ax:X5}Mtr:RBV") {
+    alias("XF:31IDA-OP{Tbl-Ax:X5}Mtr_Alarm")
     field(VAL, "0")
-    field(SCAN, ".1 second")
+    field(SCAN, ".5 second")
     field(INPA, "XF:31IDA-OP{Tbl-Ax:X5}Mtr:SP")
     field(CALC, "VAL<A?VAL+1:VAL>A?VAL-1:VAL")
     field(HIHI, "10")
@@ -143,13 +185,23 @@ record(calcout,"XF:31IDA-BI{Dev:5}E-I") {
   field(CALC,"C<A||C>B?RNDM*E:EXP(-1.0*((C-D)**2))")
 }
 
+record(calc, "XF:31IDA-OP{Tbl-Ax:X5}Mtr:MOVN") {
+    field(VAL, "0")
+    field(SCAN, ".1 second")
+    field(INPA, "XF:31IDA-OP{Tbl-Ax:X5}Mtr:SP")
+    field(INPB, "XF:31IDA-OP{Tbl-Ax:X5}Mtr:RBV")
+    field(CALC, "A==B?0:1")
+}
+
 record(ao, "XF:31IDA-OP{Tbl-Ax:X6}Mtr:SP") {
+    alias("XF:31IDA-OP{Tbl-Ax:X6}Mtr")
     field(SCAN, "1 second")
 }
 
 record(calc, "XF:31IDA-OP{Tbl-Ax:X6}Mtr:RBV") {
+    alias("XF:31IDA-OP{Tbl-Ax:X6}Mtr_Alarm")
     field(VAL, "0")
-    field(SCAN, ".1 second")
+    field(SCAN, ".5 second")
     field(INPA, "XF:31IDA-OP{Tbl-Ax:X6}Mtr:SP")
     field(CALC, "VAL<A?VAL+1:VAL>A?VAL-1:VAL")
     field(HIHI, "10")
@@ -170,4 +222,12 @@ record(calcout,"XF:31IDA-BI{Dev:6}E-I") {
   field(INPD,"-2.5")
   field(INPE,"0.3")
   field(CALC,"C<A||C>B?RNDM*E:EXP(-1.0*((C-D)**2))")
+}
+
+record(calc, "XF:31IDA-OP{Tbl-Ax:X6}Mtr:MOVN") {
+    field(VAL, "0")
+    field(SCAN, ".1 second")
+    field(INPA, "XF:31IDA-OP{Tbl-Ax:X6}Mtr:SP")
+    field(INPB, "XF:31IDA-OP{Tbl-Ax:X6}Mtr:RBV")
+    field(CALC, "A==B?0:1")
 }
